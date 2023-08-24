@@ -1,0 +1,22 @@
+<form [formGroup]="registerForm" (ngSubmit)="register()" class="form">
+  <mat-form-field>
+    <mat-label for="email">Email</mat-label>
+    <input matInput placeholder="Ex. pat@example.com" type="email" id="email" formControlName="email">
+    <mat-error
+      *ngIf="registerForm.get('email')!.invalid && (registerForm.get('email')!.dirty || registerForm.get('email')!.touched)">
+      Please enter a valid email address
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label for="password">Password</mat-label>
+    <input matInput placeholder="Ex. pat@example.com" type="password" id="password" formControlName="password">
+    <mat-error
+      *ngIf="registerForm.get('password')!.invalid && (registerForm.get('password')!.dirty || registerForm.get('password')!.touched)">
+    Password must be at least 6 characters
+    </mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button type="submit" [disabled]="registerForm.invalid">Register</button>
+
+</form>

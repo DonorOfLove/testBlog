@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  max-width: 700px;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0 auto;
+}
+
+.post:hover {
+  background-color: #f6f6f6;
+  transition: 0.1s;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.header button {
+  margin: 5px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.warning{
+  color: #ffb3b3;
+  margin: 0 auto;
+}

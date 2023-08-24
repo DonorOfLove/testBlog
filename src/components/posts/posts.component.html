@@ -1,0 +1,9 @@
+<h2 *ngIf="!isAuth.isAuth" class="warning">You should be authorized to see posts. Please, create new account or log in.</h2>
+<div *ngIf="isAuth.isAuth">
+  <h3>New Today:</h3>
+  <mat-list *ngFor="let post of posts$ | async; let i= index" (click)="goToPost(post.id)">
+    <mat-list-item class="post">{{post.title}}</mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>
+</div>
+

@@ -1,0 +1,5 @@
+<div class="header">
+  <button [routerLink]="['/login']" routerLinkActive="mat-accent" mat-raised-button *ngIf="!isAuth.isAuth" (click)="onLogin()">Login</button>
+  <button mat-raised-button *ngIf="isAuth.isAuth" (click)="onLogout()">Logout</button>
+  <button [routerLink]="['/register']" routerLinkActive="mat-accent" mat-raised-button (click)="onRegister()">Register</button>
+</div>
